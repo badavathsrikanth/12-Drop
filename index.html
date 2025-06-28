@@ -31,7 +31,7 @@
     }
     .subject-box h2 {
       color: #16a085;
-      margin-bottom: 15px;
+      margin: 30px 0 10px;
     }
     .row {
       display: flex;
@@ -39,11 +39,13 @@
       border-bottom: 1px solid #ccc;
       padding: 10px 0;
       align-items: center;
+      cursor: pointer;
     }
     .row.header {
       background-color: #2980b9;
       color: white;
       font-weight: bold;
+      cursor: default;
     }
     .box {
       flex: 1;
@@ -65,6 +67,16 @@
       transform: scale(1.2);
       cursor: pointer;
     }
+    .subtopics {
+      display: none;
+    }
+    .subtopics.visible {
+      display: block;
+    }
+    .subtopic {
+      padding-left: 40px;
+      background: #fafafa;
+    }
     @media (max-width: 768px) {
       .row {
         flex-direction: column;
@@ -85,9 +97,7 @@
 <div class="container">
   <h1>MPC Second Year Study Plan</h1>
 
-  <!-- Maths Section -->
   <div class="subject-box">
-    <h2>Maths (IIA & IIB)</h2>
     <div class="row header">
       <div class="box">Topic</div>
       <div class="box">PYQ</div>
@@ -95,73 +105,86 @@
       <div class="box">Done</div>
     </div>
 
-    <!-- Maths IIA Chapters -->
-    <div class="row"><div class="box">Matrices</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Determinants</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">System of Linear Equations</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Eigenvalues and Eigenvectors</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Quadratic Expressions</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Theory of Equations</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Permutations and Combinations</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Binomial Theorem</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-
-    <!-- Maths IIB Chapters -->
-    <div class="row"><div class="box">Circle</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">System of Circles</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Parabola</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Ellipse</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Hyperbola</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Integration</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Definite Integrals</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Differential Equations</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Probability</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Applications of Integration</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-  </div>
-
-  <!-- Physics Section -->
-  <div class="subject-box">
-    <h2>Physics</h2>
-    <div class="row header">
-      <div class="box">Topic</div>
-      <div class="box">PYQ</div>
-      <div class="box">YouTube Link</div>
-      <div class="box">Done</div>
-    </div>
-
-    <div class="row"><div class="box">Waves</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Ray Optics</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Wave Optics</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Electric Charges & Fields</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Current Electricity</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Magnetism</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Electromagnetic Induction</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">AC Circuits</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Dual Nature of Matter</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Atoms & Nuclei</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Semiconductors</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-  </div>
-
-  <!-- Chemistry Section -->
-  <div class="subject-box">
-    <h2>Chemistry</h2>
-    <div class="row header">
-      <div class="box">Topic</div>
-      <div class="box">PYQ</div>
-      <div class="box">YouTube Link</div>
-      <div class="box">Done</div>
-    </div>
-
-    <div class="row"><div class="box">Solid State</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Solutions</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Electrochemistry</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Chemical Kinetics</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Surface Chemistry</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">d & f Block Elements</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Coordination Compounds</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Polymers</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
-    <div class="row"><div class="box">Biomolecules</div><div class="box"><a href="#">PYQ</a></div><div class="box"><a href="#">YouTube</a></div><div class="box"><input type="checkbox"></div></div>
+    <div id="dynamic-content"></div>
   </div>
 </div>
+
+<script>
+  const subjects = {
+    Maths: [
+      "Matrices", "Determinants", "System of Linear Equations", "Eigenvalues and Eigenvectors", "Quadratic Expressions",
+      "Theory of Equations", "Permutations and Combinations", "Binomial Theorem", "Circle", "System of Circles",
+      "Parabola", "Ellipse", "Hyperbola", "Integration", "Definite Integrals", "Differential Equations", "Probability", "Applications of Integration"
+    ],
+    Physics: [
+      "Waves", "Ray Optics", "Wave Optics", "Electric Charges & Fields", "Current Electricity", "Magnetism",
+      "Electromagnetic Induction", "AC Circuits", "Dual Nature of Matter", "Atoms & Nuclei", "Semiconductors"
+    ],
+    Chemistry: [
+      "Solid State", "Solutions", "Electrochemistry", "Chemical Kinetics", "Surface Chemistry",
+      "d & f Block Elements", "Coordination Compounds", "Polymers", "Biomolecules"
+    ]
+  };
+
+  const subtopics = [
+    "Concept 1",
+    "Concept 2",
+    "Important Formulae",
+    "Applications",
+    "Numerical Practice"
+  ];
+
+  window.onload = () => {
+    const container = document.getElementById("dynamic-content");
+    let index = 0;
+    for (let subject in subjects) {
+      container.innerHTML += `<h2>${subject}</h2>`;
+      subjects[subject].forEach(topic => {
+        container.innerHTML += `
+          <div class="row" onclick="toggleSubtopics(this)">
+            <div class="box">${topic}</div>
+            <div class="box"><a href="#">PYQ</a></div>
+            <div class="box"><a href="#">YouTube</a></div>
+            <div class="box"><input type="checkbox" onclick="event.stopPropagation()"></div>
+          </div>
+          <div class="subtopics">
+            ${subtopics.map(st => `
+              <div class="row subtopic">
+                <div class="box">${st}</div>
+                <div class="box"><a href="#">PYQ</a></div>
+                <div class="box"><a href="#">YouTube</a></div>
+                <div class="box"><input type="checkbox"></div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        index++;
+      });
+    }
+  };
+
+  function toggleSubtopics(row) {
+    const subtopics = row.nextElementSibling;
+    if (subtopics && subtopics.classList.contains('subtopics')) {
+      subtopics.classList.toggle('visible');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('input[type=\"checkbox\"]');
+    checkboxes.forEach((checkbox, index) => {
+      const saved = localStorage.getItem(`checkbox-${index}`);
+      if (saved === "true") {
+        checkbox.checked = true;
+        checkbox.closest('.row').classList.add('done');
+      }
+      checkbox.addEventListener('change', function () {
+        localStorage.setItem(`checkbox-${index}`, checkbox.checked);
+        checkbox.closest('.row').classList.toggle('done', checkbox.checked);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
